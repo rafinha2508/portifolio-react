@@ -1,8 +1,29 @@
-/* pagina principal */
+/* Reset e Configurações Gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Garante que ocupem toda a altura da janela */
+    display: flex;
+    flex-direction: column;
+    background-color: #141725;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141725;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Estrutura Principal */
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Garante que o root ocupe toda a altura da página */
 }
 
 header {
@@ -42,28 +63,23 @@ nav ul li a {
 nav ul li a:hover {
     color: #1e90ff;
 }
- 
-/* main */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #141725;
-    color: #ffffff;
+/* Estilos da Main */
+.main {
+    flex-grow: 1; /* O conteúdo principal ocupa o espaço disponível */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    margin: 0%;
+    justify-content: space-between; /* Faz o footer ficar no final */
+    min-height: 100%; /* Faz a main ocupar a altura mínima */
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     padding: 20px;
-    flex-grow: 1;
+    width: 100%;
+    flex-grow: 1; /* Permite que o conteúdo central cresça */
 }
 
 .card {
@@ -114,7 +130,7 @@ p {
     transition: background-color 0.3s, color 0.3s;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -128,20 +144,14 @@ a:visited {
     color: #141725;
 }
 
-/* estilos footer */
+/* Estilos do Footer */
 footer {
     background-color: #1a1d2e; 
-    width: 100vw;
     padding: 10px 0;
     text-align: center;
     font-weight: bold;
-    /* começo do improviso -
-    assim, o footer não estava onde deveria. meu mano Léo deu a ideia, eu fiz e funcionou, mas não ficou tão responsivo. 
-    porém, como mencionei no 'about' do repositório, melhor isso do que ficar feio. */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    /* fim do improviso */
+    color: white;
+    width: 100%;
 }
 
 .social-links {
