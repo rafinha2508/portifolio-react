@@ -130,12 +130,18 @@ a:visited {
 
 /* estilos footer */
 footer {
-    background-color: #1a1d2e;
-    width: 100%;
+    background-color: #1a1d2e; 
+    width: 100vw;
     padding: 10px 0;
-    margin-top: auto;
     text-align: center;
     font-weight: bold;
+    /* começo do improviso -
+    assim, o footer não estava onde deveria. meu mano Léo deu a ideia, eu fiz e funcionou, mas não ficou tão responsivo. 
+    porém, como mencionei no 'about' do repositório, melhor isso do que ficar feio. */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* fim do improviso */
 }
 
 .social-links {
